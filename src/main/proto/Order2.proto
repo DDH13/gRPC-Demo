@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "org.example";
+
+service TeacherService {
+  rpc GetTeacher(TeacherRequest) returns (TeacherResponse) {};
+  rpc GetTeacherStream(TeacherRequest) returns (stream TeacherResponse) {};
+  rpc SendTeacherStream(stream TeacherRequest) returns (TeacherResponse) {};
+  rpc SendAndGetTeacherStream(stream TeacherRequest) returns (stream TeacherResponse) {}
+}
+
+message TeacherRequest {
+  int32 id = 3;
+}
+
+message TeacherResponse {
+  string name = 1;
+  int32 age = 2;
+}
