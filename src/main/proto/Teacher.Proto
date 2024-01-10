@@ -11,7 +11,7 @@ service TeacherService {
 }
 
 message TeacherRequest {
-  int32 id = 3;
+  int32 id = 4;
 }
 
 message TeacherResponse {
