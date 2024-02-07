@@ -28,7 +28,7 @@ static_resources: # Defines static configurations for listeners and clusters
                     routes: # Route configurations for requests
                       
                       - match: # Conditions to match incoming requests
-                          path: "/TeacherService" # Matching requests with any path prefix
+                          path: "/TeacherService/" # Matching requests with any path prefix
                         route: # Route configuration for matched requests
                           host_rewrite_literal: localhost # Rewrites the host header to 'localhost'
                           cluster: grpc # Routes requests to the 'grpc' cluster
@@ -45,7 +45,7 @@ static_resources: # Defines static configurations for listeners and clusters
                                 end
 
                       - match:
-                          path: "/StudentService" # Matching requests with any path prefix
+                          path: "/StudentService/" # Matching requests with any path prefix
                         route: # Route configuration for matched requests
                           host_rewrite_literal: localhost # Rewrites the host header to 'localhost'
                           cluster: grpc # Routes requests to the 'grpc' cluster
