@@ -12,7 +12,6 @@ public class Server {
     Logger logger = LoggerFactory.getLogger(Server.class);
     io.grpc.Server server = ServerBuilder.forPort(6565)
             .addService(new StudentServiceImpl())
-            .addService(new TeacherServiceImpl())
             .build();
 
 }

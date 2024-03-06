@@ -3,6 +3,8 @@ syntax = "proto3";
 option java_multiple_files = true;
 option java_package = "org.example";
 
+package teacher;
+
 service TeacherService {
   rpc GetTeacher(TeacherRequest) returns (TeacherResponse) {};
   rpc GetTeacherStream(TeacherRequest) returns (stream TeacherResponse) {};
@@ -11,7 +13,7 @@ service TeacherService {
 }
 
 message TeacherRequest {
-  int32 id = 4;
+  int32 id = 3;
 }
 
 message TeacherResponse {
